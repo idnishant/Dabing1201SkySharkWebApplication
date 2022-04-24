@@ -87,6 +87,15 @@ namespace Dabing1201SkySharkWebApplication.LOB
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+
+        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -96,13 +105,13 @@ namespace Dabing1201SkySharkWebApplication.LOB
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// txtFlightNo control.
+        /// txtFltNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFlightNo;
+        protected global::System.Web.UI.WebControls.TextBox txtFltNo;
 
         /// <summary>
         /// Label4 control.
@@ -166,6 +175,15 @@ namespace Dabing1201SkySharkWebApplication.LOB
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label6;
+
+        /// <summary>
+        /// lblTicketStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTicketStatus;
 
         /// <summary>
         /// Label7 control.

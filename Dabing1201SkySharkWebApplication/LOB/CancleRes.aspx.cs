@@ -46,7 +46,7 @@ namespace Dabing1201SkySharkWebApplication.LOB
             }
             else if (ticketNodataSet.Tables["TicketDetails"].Rows[0][4].ToString().Equals("False"))
             {
-                lblMessage.Text = "The ticket already has Cancelled";
+                lblMessage.Text = "The ticket already has been Cancelled";
                 return;
             }else {
                 String ticketNo, user, cancDate, journeyDate;

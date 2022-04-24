@@ -37,7 +37,7 @@
                 </tr>
 
             </table>
-            <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em">
+            <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="1">
                 <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                 <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                 <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -55,9 +55,15 @@
                                 </tr>
                                  <tr>
                                     <td>
+                                        <asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                 <tr>
+                                    <td>
                                         <asp:Label ID="Label3" runat="server" Text="Flight Numner"></asp:Label></td>
                                     <td>
-                                        <asp:TextBox ID="txtFlightNo" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtFltNo" runat="server"></asp:TextBox>
                                      </td>
                                     <td></td>
                                 </tr>
@@ -75,16 +81,16 @@
                                     <td>
                                         <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label></td>
                                     <td>
-                                        <asp:Calendar ID="calDepDate" runat="server"></asp:Calendar>
+                                        <asp:Calendar ID="calDepDate" runat="server" OnSelectionChanged="calDepDate_SelectionChanged"></asp:Calendar>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td>
                                       </td>
-                                    <td></td>
+                                    <td><asp:Button ID="btnFStatSubmit" runat="server" Text="Query Status" OnClick="btnFStatSubmit_Click" /></td>
                                     <td>
-                                        <asp:Button ID="btnFStatSubmit" runat="server" Text="Submit" /></td>
+                                        </td>
                                 </tr>
                             </table>
                     </asp:WizardStep>
@@ -98,6 +104,13 @@
                                     <td></td>
                                     <td></td>
                                 </tr>
+                              <tr>
+                                    <td>
+                                        <asp:Label ID="lblTicketStatus" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
                             <tr>
                                     <td>
                                         <asp:Label ID="Label7" runat="server" Text="Ticket No"></asp:Label></td>
@@ -109,7 +122,7 @@
                                     <td></td>
                                    
                                     <td>
-                                        <asp:Button ID="btnTStatSubmit" runat="server" Text="Submit" /></td>
+                                        <asp:Button ID="btnTStatSubmit" runat="server" Text="Submit" OnClick="btnTStatSubmit_Click" /></td>
                              <td></td>    
                             </tr>
                             </table>
