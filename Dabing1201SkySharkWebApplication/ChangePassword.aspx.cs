@@ -16,11 +16,11 @@ namespace Dabing1201SkySharkWebApplication
 
             if (Session["usrRole"] == null)
             {
-                Response.Redirect(".\\default1.aspx");
+                Response.Redirect(".\\default.aspx");
             }
             if (!(Session["usrRole"].ToString() == "Admin"))
             {
-                Response.Redirect(".\\default1.aspx");
+                Response.Redirect(".\\default.aspx");
             }
             else
             {

@@ -257,17 +257,31 @@ namespace Dabing1201SkySharkWebApplication.LOB
                     SqlCommand cmd = new SqlCommand(insertSql, conn);
 
 
-                    String ticketNoSql = "select Max(TicketNo)+1 as TicketNo from dtReservations";
+                    String ticketNoSql = "select TicketNo from dtReservations";
                     SqlCommand ticketNoSqlCmd = new SqlCommand(ticketNoSql, conn);
 
                     SqlDataAdapter adapter = new SqlDataAdapter(ticketNoSqlCmd);
 
                     DataSet ticketNodataSet = new DataSet();
                     adapter.Fill(ticketNodataSet, "TicketNo");
+                    int count, maxno, ticketno;
                     if (ticketNodataSet.Tables["TicketNo"].Rows.Count > 0)
                     {
-                        TicketNo = ticketNodataSet.Tables["TicketNo"].Rows[0][0].ToString();
+                       maxno = Convert.ToInt32(ticketNodataSet.Tables["TicketNo"].Rows[0][0].ToString().Trim());
+                        for (count = 1; count < ticketNodataSet.Tables["TicketNo"].Rows.Count; count++) { 
+                            if(maxno< Convert.ToInt32(ticketNodataSet.Tables["TicketNo"].Rows[count][0].ToString().Trim()))
+                            {
+                                maxno = Convert.ToInt32(ticketNodataSet.Tables["TicketNo"].Rows[count][0].ToString().Trim());
+                            }
+                        }
+                        
                     }
+                    else
+                    {
+                        maxno=0;
+                    }
+                    ticketno = maxno + 1;
+                    TicketNo = Convert.ToString(ticketno);
 
                     cmd.Parameters.AddWithValue("@TicketNo", TicketNo);//??
                     cmd.Parameters.AddWithValue("@FltNo", txtFltNo.Text.Trim());
