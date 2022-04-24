@@ -12,7 +12,7 @@ namespace Dabing1201SkySharkWebApplication.LOB
 {
     public partial class CreateRes : System.Web.UI.Page
     {
-        int FStatus = 0;
+        int FStatus = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
 

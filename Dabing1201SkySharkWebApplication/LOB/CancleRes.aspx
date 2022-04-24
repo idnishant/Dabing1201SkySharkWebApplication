@@ -36,6 +36,12 @@ Business Executive
                     <td></td>
                 </tr>
                 <tr>
+                    <td colspan="2">
+                        <asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
                     <td>
                         <asp:Label ID="Label2" runat="server" Text="Ticket No"></asp:Label></td>
                     <td>
@@ -48,7 +54,7 @@ Business Executive
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel Ticket" /></td>
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel Ticket" OnClick="btnCancel_Click" /></td>
                     <td></td>
                 </tr>
                 <tr>

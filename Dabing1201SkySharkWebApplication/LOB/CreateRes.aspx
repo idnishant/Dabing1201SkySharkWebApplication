@@ -36,7 +36,7 @@
                     <td></td>
                 </tr>
             </table>
-            <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="2" OnNextButtonClick="Wizard1_NextButtonClick" OnFinishButtonClick="Wizard1_FinishButtonClick">
+            <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0" OnNextButtonClick="Wizard1_NextButtonClick" OnFinishButtonClick="Wizard1_FinishButtonClick">
                 <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                 <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                 <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -71,8 +71,8 @@
                                     <asp:Label ID="Label4" runat="server" Text="Class"></asp:Label></td>
                                 <td>
                                     <asp:ListBox ID="lstClass" runat="server">
-                                        <asp:ListItem>Executive</asp:ListItem>
-                                        <asp:ListItem>Business</asp:ListItem>
+                                        <asp:ListItem Value="Exec">Executive</asp:ListItem>
+                                        <asp:ListItem Value="Busi">Business</asp:ListItem>
                                     </asp:ListBox></td>
                                 <td></td>
                                 <td></td>
@@ -160,7 +160,7 @@
                                 </tr>
                         </table>
                     </asp:WizardStep>
-                    <asp:WizardStep runat="server" Title="Make Reservation">
+                    <asp:WizardStep ID="WizardStep3" runat="server" Title="Make Reservation">
                         <!-- step 3-->
                             <table>
                             <tr>
