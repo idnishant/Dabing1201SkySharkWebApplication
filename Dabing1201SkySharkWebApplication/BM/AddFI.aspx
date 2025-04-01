@@ -4,7 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <form id="form1" runat="server">
-    <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px">
+    <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+        ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px">
         <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
         <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
         <DynamicMenuStyle BackColor="#F7F6F3" />
